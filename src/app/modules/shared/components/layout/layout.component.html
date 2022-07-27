@@ -2,12 +2,11 @@
 <mat-drawer-container autosize>
   <mat-drawer mode="side" #drawer opened>
     <div class="logo">
-      <h1 class="text-center">
-
-      </h1>
+      <img src="assets/images/sabienal-logo.png" width="200" height="150" alt="">
     </div>
-    <br>
-    <app-menu></app-menu>
+    <div>
+      <app-menu></app-menu>
+    </div>
   </mat-drawer>
   <mat-drawer-content>
     <mat-toolbar>
@@ -16,7 +15,7 @@
         <button (click)="drawer.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
         <mat-icon>menu</mat-icon>
         </button>
-        <span>Bienes Nacionales</span>
+        <span>Servicio Administrativo de Bienes Nacionales</span>
         <span class="example-spacer"></span>
       </mat-toolbar-row>
     </mat-toolbar>

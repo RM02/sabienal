@@ -4,7 +4,6 @@ mat-drawer-content {
 }
 mat-drawer {
   min-width: 260px;
-  border-right: 5px solid #263238;
   background: #000a12;
 }
 mat-drawer-container {
@@ -57,10 +56,21 @@ only screen and (max-width: 760px),
   height: 100px;
 }
 .logo {
-  background-color: #eceff1;
-  height: 80px;
-  border-radius: 2em;
-  margin: 0 20px;
+  height: auto;
+  display: block;
+  position: relative;
+}
+
+.logo img {
+  position: relative;
+  width: 220px;
+  height: 150px;
+  border-radius: 5em;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 .example-spacer {
   flex: 1 1 auto;
