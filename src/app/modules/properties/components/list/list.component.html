@@ -1,0 +1,43 @@
+  <div class="example-flex-container">
+    <mat-form-field appearance="standard">
+      <mat-label>Buscar</mat-label>
+      <input matInput placeholder="Ex. ium" #input>
+    </mat-form-field>
+    <div>
+      <button mat-raised-button color="primary">
+        <mat-icon>download</mat-icon>
+        <mat-label>Descargar</mat-label>
+      </button>
+    </div>
+  </div>
+
+<table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
+
+  <ng-container [matColumnDef]="obj.key" *ngFor="let obj of tableConfig">
+    <th mat-header-cell *matHeaderCellDef> {{obj.label}} </th>
+    <td mat-cell *matCellDef="let element"> {{ element[obj.key] }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="expand">
+    <th mat-header-cell *matHeaderCellDef aria-label="row actions">Actions</th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-icon-button aria-label="expand row" (click)="delete(element)">
+        <mat-icon color="warn">delete</mat-icon>
+      </button>
+      <button mat-icon-button aria-label="expand row" (click)="delete(element)">
+        <mat-icon color="primary">edit</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumnsExpand"></tr>
+  <tr mat-row *matRowDef="let element; columns: displayedColumnsExpand;"
+      class="example-element-row">
+  </tr>
+</table>
+
+<mat-paginator (page)="nextPage($event)" [length]="total"
+  [pageSize]="perPage"
+  [pageSizeOptions]="[5, 10, 25]"
+  aria-label="Select page">
+</mat-paginator>

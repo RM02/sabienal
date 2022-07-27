@@ -1,0 +1,43 @@
+table {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+mat-form-field {
+  width: 80%;
+  padding-left: 10px;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+}
+mat-icon {
+  padding: 2px;
+}
+
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	td {
+    font-size: 10px;
+    padding: 0px;
+    margin: 0px 0px;
+  }
+
+  th {
+    font-size: 10px;
+    padding: 0px;
+  }
+  button mat-label {
+    display: none
+  }
+}

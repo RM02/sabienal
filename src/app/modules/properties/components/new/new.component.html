@@ -1,0 +1,43 @@
+<mat-card>
+
+  <form class="example-full-width">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Activo</mat-label>
+      <input matInput [(ngModel)]="data.name" name="name">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Modelo</mat-label>
+      <input matInput [(ngModel)]="data.model" name="model">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Marca</mat-label>
+      <input matInput [(ngModel)]="data.brand" name="brand">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Serial</mat-label>
+      <input matInput [(ngModel)]="data.serie" name="serie">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Especificaciones</mat-label>
+      <input matInput [(ngModel)]="data.spec" name="spec">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Localización</mat-label>
+      <input matInput [(ngModel)]="data.location" name="location">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Usuario</mat-label>
+      <input matInput [(ngModel)]="data.user" name="user">
+    </mat-form-field>
+  </form>
+  <div class="center">
+    <button mat-raised-button color="primary" (click)="save()">
+      <mat-icon>save</mat-icon>
+      Guardar
+    </button>
+    <button mat-raised-button color="accent">
+      <mat-icon>close</mat-icon>
+      Cancelar</button>
+  </div>
+
+</mat-card>

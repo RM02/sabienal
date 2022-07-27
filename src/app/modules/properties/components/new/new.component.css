@@ -1,0 +1,11 @@
+.example-full-width {
+  width: 100%;
+  margin-bottom: 5px;
+
+}
+mat-card {
+  padding: 50px;
+}
+button {
+  margin-right: 5px;
+}

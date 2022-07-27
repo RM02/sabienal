@@ -1,0 +1,18 @@
+mat-icon {
+  padding-right: 10px;
+  font-weight: 400;
+  color: #eceff1
+}
+mat-tree-node {
+  margin-bottom: 2px;
+  padding: 5px;
+  background: none;
+  border-bottom: 1px solid #263238;
+}
+mat-tree {
+  background: none;
+}
+span {
+  font-weight: 500;
+  color: #eceff1;
+}
