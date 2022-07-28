@@ -66,7 +66,9 @@ export class ListComponent implements OnInit {
 
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    //this.get(this.params)
+  }
 
   get (params:any) {
     this.propertiesApi.getList(params).subscribe((res:any) => {
@@ -79,7 +81,7 @@ export class ListComponent implements OnInit {
     this.get(this.params)
   }
   delete(data:any) {
-    console.log(data)
+    this.propertiesApi.delete(data._id).subscribe((res) => this.get(this.params))
   }
 
 }

@@ -7,6 +7,8 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 export class PropertiesService {
 
   API = 'https://api-sabienal.herokuapp.com/properties';
+  // API_DEV = 'http://localhost:5000/properties';
+
 
   constructor(private http: HttpClient) { }
 
@@ -15,5 +17,8 @@ export class PropertiesService {
   }
   create (data:any) {
     return this.http.post(`${this.API}/new`, data, { responseType: 'json' })
+  }
+  delete(id:string) {
+    return this.http.delete(`${this.API}/${id}`)
   }
 }
