@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { LayoutComponent } from './components/layout/layout.component';
 import { MenuComponent } from './components/menu/menu.component';
@@ -30,7 +31,8 @@ import { MenuComponent } from './components/menu/menu.component';
     MatCardModule,
     MatInputModule,
     MatToolbarModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatProgressSpinnerModule
   ],
   exports: [
     LayoutComponent,
@@ -40,7 +42,8 @@ import { MenuComponent } from './components/menu/menu.component';
     MatInputModule,
     MatButtonModule,
     MatToolbarModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatProgressSpinnerModule
   ]
 })
 export class SharedModule { }

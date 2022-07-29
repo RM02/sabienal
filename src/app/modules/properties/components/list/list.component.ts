@@ -53,6 +53,8 @@ export class ListComponent implements OnInit {
   dataSource: any;
   total: number = 0;
   perPage: number = 5;
+  loading: boolean = true;
+  inputData: any;
   params: any = {
     perPage: this.perPage,
     page: 1
@@ -71,9 +73,11 @@ export class ListComponent implements OnInit {
   }
 
   get (params:any) {
+    this.loading = true
     this.propertiesApi.getList(params).subscribe((res:any) => {
       this.dataSource = res.result
       this.total = res.total
+      this.loading = false
     })
   }
   nextPage (event:any) {
@@ -82,6 +86,18 @@ export class ListComponent implements OnInit {
   }
   delete(data:any) {
     this.propertiesApi.delete(data._id).subscribe((res) => this.get(this.params))
+  }
+  search(query:any) {
+    let params = {... this.params, search: this.inputData }
+
+    this.loading = true
+    setTimeout(() => {
+      this.propertiesApi.search(params).subscribe((res:any) => {
+        this.dataSource = res.result
+        this.total = res.total
+        this.loading = false
+      })
+    }, 100);
   }
 
 }
